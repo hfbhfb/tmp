@@ -1,6 +1,6 @@
 all:
-	echo "do nothing"
-	echo "clean 规则 清空敏感信息公开到github中"
+	@echo "do nothing"
+	@echo "clean 规则 清空敏感信息公开到github中"
 
 clean:
 
