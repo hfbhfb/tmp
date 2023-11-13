@@ -1,14 +1,12 @@
-
-
-chenliang这个用户属于项目管理员，在他们自己的办公区无法访问工作负载中的日志和控制台，在运维的办公区可以访问
-
-开发的办公区是通过nginx代理访问cce平台，跟这个有关系吗
+<img src="imgdir/image-20231113175734089.png" alt="image-20231113175734089" style="zoom:50%;" />
 
 
 
 
 
-<img src="imgdir/image-20231113163700250.png" alt="image-20231113163700250" style="zoom:50%;" />
+<img src="imgdir/image-20231113175814722.png" alt="image-20231113175814722" style="zoom:50%;" />
+
+
 
 
 
