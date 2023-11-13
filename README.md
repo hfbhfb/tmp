@@ -12,3 +12,5 @@
 
 
 
+{"status":"error","error":"query Prometheus failed: client_error: client error: 403","errorCode":"CCE.CCE.00060202","message":"Query prometheus failed","reason":"client_error: client error: 403"}
+
