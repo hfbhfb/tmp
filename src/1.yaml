@@ -1,3 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bccl
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: yzw-bccl-cc-app
+  name: bccl-service
+  namespace: bccl
+spec:
+  ports:
+    - port: 18085
+      targetPort: 18085
+  selector:
+    app: yzw-bccl-cc-app
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,8 +44,8 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            cpu: 2C
+            cpu: 2
             memory: 4Gi
           limits:
-            cpu: 2C
+            cpu: 2
             memory: 4Gi
