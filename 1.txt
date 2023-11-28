@@ -1,0 +1,60 @@
+~ # k logs -f -ncce keycloak-0
+I1124 15:49:41.076165       1 start.go:29] Keycloak is initialing...
+Importing keystore /sslcerts/p12.cert to /opt/keycloak/keycloak.jks...
+Entry for alias 1 successfully imported.
+Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
+JAVA_OPTS already set in environment; overriding default settings with values: -XX:+UseContainerSupport -XX:InitialRAMPercentage=50.0 -XX:MinRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=256m
+Appending additional Java properties to JAVA_OPTS: -Djboss.as.management.blocking.timeout='2000' -Djava.awt.headless=true -Djgroups.dns.query=keycloak-headless -Dfile.encoding=UTF-8
+Updating the configuration and installing your custom providers, if any. Please wait.
+2023-11-24 15:49:44,262 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: admin-fine-grained-authz, token-exchange
+2023-11-24 15:49:46,475 WARN  [org.keycloak.services] (build-12) KC-SERVICES0047: cas-role-idp-mapper (io.github.johnjcool.keycloak.broker.cas.mappers.AttributeToRoleMapper) is implementing the internal SPI identity-provider-mapper. This SPI is internal and may change without notice
+2023-11-24 15:49:46,475 WARN  [org.keycloak.services] (build-12) KC-SERVICES0047: cas-user-attribute-idp-mapper (io.github.johnjcool.keycloak.broker.cas.mappers.UserAttributeMapper) is implementing the internal SPI identity-provider-mapper. This SPI is internal and may change without notice
+2023-11-24 15:49:47,777 WARN  [org.keycloak.services] (build-12) KC-SERVICES0047: cas (io.github.johnjcool.keycloak.broker.cas.CasIdentityProviderFactory) is implementing the internal SPI identity_provider. This SPI is internal and may change without notice
+2023-11-24 15:50:14,476 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 30680ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+I1124 15:50:14.666727       1 start.go:53] Keycloak is starting...
+JAVA_OPTS already set in environment; overriding default settings with values: -javaagent:${JAVAAGENT_PATH}/cce-javaagent.jar -XX:+UseContainerSupport -XX:InitialRAMPercentage=50.0 -XX:MinRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=256m
+Appending additional Java properties to JAVA_OPTS: -Djboss.as.management.blocking.timeout='2000' -Djava.awt.headless=true -Djgroups.dns.query=keycloak-headless -Dfile.encoding=UTF-8
+2023-11-24 15:50:15,976 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: admin-fine-grained-authz, token-exchange
+2023-11-24 15:50:16,614 INFO  [org.keycloak.quarkus.runtime.hostname.DefaultHostnameProvider] (main) Hostname settings: Base URL: <unset>, Hostname: <request>, Strict HTTPS: false, Path: <request>, Strict BackChannel: false, Admin URL: <unset>, Admin: <request>, Port: -1, Proxied: true
+2023-11-24 15:50:16,619 WARN  [org.keycloak.protocol.oidc.OIDCLoginProtocolFactory] (main) Deprecated switch 'legacy-logout-redirect-uri' is enabled. Please try to disable it and update your clients to use OpenID Connect compliant way for RP-initiated logout.
+2023-11-24 15:50:16,619 WARN  [org.keycloak.protocol.oidc.OIDCLoginProtocolFactory] (main) Deprecated switch 'suppress-logout-confirmation-screen' is enabled. Please try to disable it and update your clients to use OpenID Connect compliant way for RP-initiated logout.
+2023-11-24 15:50:19,456 INFO  [org.infinispan.SERVER] (keycloak-cache-init) ISPN005054: Native IOUring transport not available, using NIO instead: io.netty.incubator.channel.uring.IOUring
+2023-11-24 15:50:19,654 WARN  [org.infinispan.CONFIG] (keycloak-cache-init) ISPN000569: Unable to persist Infinispan internal caches as no global state enabled
+2023-11-24 15:50:19,663 WARN  [org.infinispan.PERSISTENCE] (keycloak-cache-init) ISPN000554: jboss-marshalling is deprecated and planned for removal
+2023-11-24 15:50:19,678 WARN  [io.quarkus.vertx.http.runtime.VertxHttpRecorder] (main) The X-Forwarded-* and Forwarded headers will be considered when determining the proxy address. This configuration can cause a security issue as clients can forge requests and send a forwarded header that is not overwritten by the proxy. Please consider use one of these headers just to forward the proxy address in requests.
+2023-11-24 15:50:19,683 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2023-11-24 15:50:19,686 INFO  [org.infinispan.CONTAINER] (keycloak-cache-init) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2023-11-24 15:50:20,925 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000078: Starting JGroups channel `ISPN` with stack `encrypt-kubernetes`
+2023-11-24 15:50:20,930 INFO  [org.jgroups.JChannel] (keycloak-cache-init) local_addr: 25992104-ff0e-45f7-aa65-c192b4ba3e80, name: keycloak-0-11806
+2023-11-24 15:50:20,950 INFO  [org.jgroups.protocols.FD_SOCK2] (keycloak-cache-init) server listening on /172.16.73.25:57800
+2023-11-24 15:50:22,954 INFO  [org.jgroups.protocols.pbcast.GMS] (keycloak-cache-init) keycloak-0-11806: no members discovered after 2002 ms: creating cluster as coordinator
+2023-11-24 15:50:22,968 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000094: Received new cluster view for channel ISPN: [keycloak-0-11806|0] (1) [keycloak-0-11806]
+2023-11-24 15:50:23,029 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000079: Channel `ISPN` local address is `keycloak-0-11806`, physical addresses are `[172.16.73.25:7800]`
+2023-11-24 15:50:23,559 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-0-11806, Site name: null
+2023-11-24 15:50:23,572 WARN  [org.mariadb.jdbc.message.server.ErrorPacket] (main) Error: 1146-42S02: Table 'keycloak.MIGRATION_MODEL' doesn't exist
+E1124 15:50:24.670679       1 start.go:294] Failed to get url https://172.16.73.25:8443/auth/health: Get "https://172.16.73.25:8443/auth/health": dial tcp 172.16.73.25:8443: connect: connection refused
+2023-11-24 15:50:24,892 WARN  [liquibase.changelog.DatabaseChangeLog] (main) Due to mariadb SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+2023-11-24 15:50:24,892 WARN  [liquibase.changelog.DatabaseChangeLog] (main) Due to mariadb SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+2023-11-24 15:50:25,095 INFO  [org.keycloak.quarkus.runtime.storage.legacy.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2023-11-24 15:50:25,668 WARN  [liquibase.changelog.DatabaseChangeLog] (main) Due to mariadb SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+2023-11-24 15:50:25,668 WARN  [liquibase.changelog.DatabaseChangeLog] (main) Due to mariadb SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+2023-11-24 15:50:25,751 WARN  [org.mariadb.jdbc.message.server.ErrorPacket] (main) Error: 1050-42S01: Table 'APPLICATION_DEFAULT_ROLES' already exists
+2023-11-24 15:50:25,781 INFO  [org.infinispan.CLUSTER] (main) ISPN000080: Disconnecting JGroups channel `ISPN`
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: Failed to start server in (production) mode
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: Failed to update database
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: liquibase.exception.MigrationFailedException: Migration failed for changeset META-INF/jpa-changelog-1.0.0.Final.xml::1.0.0.Final-KEYCLOAK-5461::sthorger@redhat.com:
+     Reason: liquibase.exception.DatabaseException: (conn=43) Table 'APPLICATION_DEFAULT_ROLES' already exists [Failed SQL: (1050) CREATE TABLE keycloak.APPLICATION_DEFAULT_ROLES (APPLICATION_ID VARCHAR(36) NOT NULL, ROLE_ID VARCHAR(36) NOT NULL)]
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: Migration failed for changeset META-INF/jpa-changelog-1.0.0.Final.xml::1.0.0.Final-KEYCLOAK-5461::sthorger@redhat.com:
+     Reason: liquibase.exception.DatabaseException: (conn=43) Table 'APPLICATION_DEFAULT_ROLES' already exists [Failed SQL: (1050) CREATE TABLE keycloak.APPLICATION_DEFAULT_ROLES (APPLICATION_ID VARCHAR(36) NOT NULL, ROLE_ID VARCHAR(36) NOT NULL)]
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: (conn=43) Table 'APPLICATION_DEFAULT_ROLES' already exists [Failed SQL: (1050) CREATE TABLE keycloak.APPLICATION_DEFAULT_ROLES (APPLICATION_ID VARCHAR(36) NOT NULL, ROLE_ID VARCHAR(36) NOT NULL)]
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: (conn=43) Table 'APPLICATION_DEFAULT_ROLES' already exists
+2023-11-24 15:50:25,818 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) For more details run the same command passing the '--verbose' option. Also you can use '--help' to see the details about the usage of the particular command.
+E1124 15:50:25.882716       1 start.go:26] Failed to start keycloak: run shell command error: exit status 1
+I1124 15:50:25.882743       1 afterStart.go:23] after start work: starting...
+E1124 15:50:25.882802       1 start.go:311] The channel for keycloak startup has been closed
+I1124 15:50:25.885759       1 afterStart.go:41] after start work: done.
+
